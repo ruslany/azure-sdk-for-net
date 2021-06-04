@@ -90,7 +90,6 @@ namespace Azure.Communication.CallingServer
                         }
                     default:
                         throw await _client._clientDiagnostics.CreateRequestFailedExceptionAsync(message.Response).ConfigureAwait(false);
-                        ;
                 }
             }
             else

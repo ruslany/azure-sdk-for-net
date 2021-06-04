@@ -709,15 +709,15 @@ namespace Azure.Communication.CallingServer
         /// a failure occurs.
         /// </remarks>
         public virtual Response<Stream> DownloadStreaming(
-        Uri endpoint,
-        HttpRange range = default,
-        CancellationToken cancellationToken = default) =>
-        _contentDownloader.DownloadStreamingInternal(
-            endpoint,
-            range,
-            async: false,
-            cancellationToken)
-        .EnsureCompleted();
+            Uri endpoint,
+            HttpRange range = default,
+            CancellationToken cancellationToken = default) =>
+            _contentDownloader.DownloadStreamingInternal(
+                endpoint,
+                range,
+                async: false,
+                cancellationToken)
+            .EnsureCompleted();
 
         /// <summary>
         /// The <see cref="DownloadTo(Stream, Uri, ContentTransferOptions, CancellationToken)"/>
